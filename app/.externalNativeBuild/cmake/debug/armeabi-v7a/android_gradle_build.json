@@ -1,0 +1,46 @@
+
+{
+	"buildFiles" : [ "D:/art/Android Studio/Projects/Avatar-Creator/app/CMakeLists.txt" ],
+	"cleanCommands" : 
+	[
+		"D:\\Softwares\\Android-Studio\\Sdk\\cmake\\3.6.4111459\\bin\\cmake.exe --build \"D:\\art\\Android Studio\\Projects\\Avatar-Creator\\app\\.externalNativeBuild\\cmake\\debug\\armeabi-v7a\" --target clean"
+	],
+	"cppFileExtensions" : [ "cpp" ],
+	"libraries" : 
+	{
+		"faceswapper-Debug-armeabi-v7a" : 
+		{
+			"abi" : "armeabi-v7a",
+			"artifactName" : "faceswapper",
+			"buildCommand" : "D:\\Softwares\\Android-Studio\\Sdk\\cmake\\3.6.4111459\\bin\\cmake.exe --build \"D:\\art\\Android Studio\\Projects\\Avatar-Creator\\app\\.externalNativeBuild\\cmake\\debug\\armeabi-v7a\" --target faceswapper",
+			"buildType" : "debug",
+			"files" : 
+			[
+				
+				{
+					"flags" : "  --target=armv7-none-linux-androideabi21 --gcc-toolchain=D:/Softwares/Android-Studio/Sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64 --sysroot=D:/Softwares/Android-Studio/Sdk/ndk-bundle/sysroot  -Dfaceswapper_EXPORTS -ID:\\Softwares\\OpenCV-android-sdk\\opencv-4.0.1-android-sdk\\sdk\\native\\jni\\include -isystem D:\\Softwares\\Android-Studio\\Sdk\\ndk-bundle\\sources\\cxx-stl\\llvm-libc++\\include -isystem D:\\Softwares\\Android-Studio\\Sdk\\ndk-bundle\\sources\\cxx-stl\\llvm-libc++abi\\include  -isystem D:/Softwares/Android-Studio/Sdk/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11 -std=c++11 -frtti -fexceptions -O0 -fno-limit-debug-info  -fPIC    -c ",
+					"src" : "D:/art/Android Studio/Projects/Avatar-Creator/app/src/main/cpp/faceswapper.cpp",
+					"workingDirectory" : "D:/art/Android Studio/Projects/Avatar-Creator/app/.externalNativeBuild/cmake/debug/armeabi-v7a"
+				}
+			],
+			"output" : "D:/art/Android Studio/Projects/Avatar-Creator/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libfaceswapper.so",
+			"toolchain" : "1012844115"
+		},
+		"lib_opencv-Debug-armeabi-v7a" : 
+		{
+			"abi" : "armeabi-v7a",
+			"artifactName" : "lib_opencv",
+			"buildType" : "debug",
+			"output" : "D:/art/Android Studio/Projects/Avatar-Creator/app/src/main/jniLibs/armeabi-v7a/libopencv_java4.so",
+			"toolchain" : "1012844115"
+		}
+	},
+	"toolchains" : 
+	{
+		"1012844115" : 
+		{
+			"cCompilerExecutable" : "D:/Softwares/Android-Studio/Sdk/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/bin/clang.exe",
+			"cppCompilerExecutable" : "D:/Softwares/Android-Studio/Sdk/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/bin/clang++.exe"
+		}
+	}
+}

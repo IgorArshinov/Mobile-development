@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="be.igorarshinov.avatar_creator">
+
+    <uses-sdk tools:overrideLibrary="org.opencv" />
+
+    <!-- CAMERA -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!--
+<uses-feature
+        android:name="android.hardware.camera"
+        android:required="true"/>
+    -->
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!--Icon made by https://www.flaticon.com/authors/flat-icons is licensed by http://creativecommons.org/licenses/by/3.0/-->
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity
+            android:name=".SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:theme="@style/AppTheme.ActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="be.igorarshinov.avatar_creator.AvatarListActivity" />
+        </activity>
+        <activity
+            android:name=".AvatarListActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".AvatarDetailsActivity"
+            android:label="@string/title_item_detail"
+            android:parentActivityName=".AvatarListActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="be.igorarshinov.avatar_creator.AvatarListActivity" />
+        </activity>
+        <activity
+            android:name=".createavatar.FaceSwapperActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:immersive="false"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".createavatar.ResultActivity"
+            android:label="@string/app_name"
+            android:parentActivityName=".createavatar.FaceSwapperActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="be.igorarshinov.avatar_creator.createavatar.FaceSwapperActivity" />
+        </activity>
+
+        <provider
+            android:name=".data.AvatarProvider"
+            android:authorities="${applicationId}"
+            android:exported="false" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_camera_paths" />
+        </provider>
+
+        <service
+            android:name=".sync.SyncIntentService"
+            android:exported="false" />
+    </application>
+
+</manifest>

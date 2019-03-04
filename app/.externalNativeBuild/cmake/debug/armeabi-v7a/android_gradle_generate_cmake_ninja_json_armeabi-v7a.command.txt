@@ -1,0 +1,15 @@
+Executable : D:\Softwares\Android-Studio\Sdk\cmake\3.6.4111459\bin\cmake.exe
+arguments : 
+-HD:\art\Android Studio\Projects\Avatar-Creator\app
+-BD:\art\Android Studio\Projects\Avatar-Creator\app\.externalNativeBuild\cmake\debug\armeabi-v7a
+-DANDROID_ABI=armeabi-v7a
+-DANDROID_PLATFORM=android-21
+-DCMAKE_LIBRARY_OUTPUT_DIRECTORY=D:\art\Android Studio\Projects\Avatar-Creator\app\build\intermediates\cmake\debug\obj\armeabi-v7a
+-DCMAKE_BUILD_TYPE=Debug
+-DANDROID_NDK=D:\Softwares\Android-Studio\Sdk\ndk-bundle
+-DCMAKE_CXX_FLAGS=-std=c++11 -frtti -fexceptions
+-DCMAKE_TOOLCHAIN_FILE=D:\Softwares\Android-Studio\Sdk\ndk-bundle\build\cmake\android.toolchain.cmake
+-DCMAKE_MAKE_PROGRAM=D:\Softwares\Android-Studio\Sdk\cmake\3.6.4111459\bin\ninja.exe
+-GAndroid Gradle - Ninja
+jvmArgs : 
+

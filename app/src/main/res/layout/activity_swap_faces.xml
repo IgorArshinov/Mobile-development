@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparentRed"
+    android:fitsSystemWindows="true"
+    tools:context=".createavatar.FaceSwapperActivity"
+    tools:ignore="Overdraw">
+
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:title="@string/create_avatar">
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="56dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:layout_constraintTop_toBottomOf="@+id/app_bar_layout"
+        tools:layout_editor_absoluteX="0dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:orientation="vertical"
+            android:scrollbars="vertical">
+
+
+            <fragment
+                android:id="@+id/avatar_details_fragment"
+                android:name="be.igorarshinov.avatar_creator.createavatar.AvatarInputFieldFragment"
+                android:layout_width="match_parent"
+                android:layout_height="45sp"
+                tools:layout="@layout/fragment_avatar_input_field" />
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/container"
+                android:layout_width="match_parent"
+                android:layout_height="330sp">
+
+            </android.support.v4.view.ViewPager>
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparentRed"
+
+                android:fillViewport="false"
+                app:tabGravity="fill"
+                app:tabMaxWidth="0dp"
+                app:tabMode="fixed" />
+
+            <Button
+                style="@style/Button"
+
+                android:onClick="onTakePhotoButtonClick"
+                android:text="@string/take_photo" />
+
+            <Button
+                style="@style/Button"
+
+                android:onClick="onChoosePhotoButtonClick"
+                android:text="@string/choose_photo" />
+
+            <Button
+                android:id="@+id/swap_faces_button"
+                style="@style/Button"
+
+                android:enabled="false"
+                android:onClick="onSwapPhotosButtonClick"
+                android:text="@string/swap_faces" />
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@color/red</color>
+    <color name="colorPrimaryDark">@color/maroon</color>
+    <color name="colorAccent">@color/teal</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="red">#D50000</color>
+    <color name="maroon">#710000</color>
+    <color name="teal">#01A088</color>
+    <color name="black">#000000</color>
+    <color name="transparentRed">#0DD50000</color>
+    <color name="transparentMaroon">#4D710000</color>
+</resources>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="preference_sorting_options">
+        <item>@string/pref_units_label_name</item>
+        <item>@string/pref_units_label_date</item>
+    </string-array>
+
+    <string-array name="preference_sorting_values">
+        <item>@string/pref_units_name</item>
+        <item>@string/pref_units_date</item>
+    </string-array>
+</resources>

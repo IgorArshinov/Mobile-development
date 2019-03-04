@@ -1,0 +1,12 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="be.igorarshinov.avatar_creator.CreateAvatarActivity">
+
+
+    <item
+        android:id="@+id/menu_action_create_new"
+        android:orderInCategory="100"
+        android:title="@string/menu_action_create_new"
+        app:showAsAction="never" />
+</menu>

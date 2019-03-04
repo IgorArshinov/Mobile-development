@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="Avatar"
+            type="be.igorarshinov.avatar_creator.model.Avatar" />
+
+    </data>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:layout_editor_absoluteX="0dp">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="16sp"
+            android:paddingTop="24sp"
+            android:paddingRight="16sp"
+            android:paddingBottom="24sp">
+
+
+            <TextView
+                android:id="@+id/text_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name:"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/item_name"
+                style="?android:attr/textAppearanceLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16sp"
+                android:text="@{Avatar.name}"
+                android:textIsSelectable="true"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@+id/text_name"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:context=".AvatarDetailsFragment" />
+
+            <ImageView
+                android:id="@+id/image_view"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+
+                android:padding="24sp"
+                android:scaleType="fitCenter"
+                android:src="@{Avatar.image}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/item_name"
+                tools:context=".AvatarDetailsFragment" />
+
+            <TextView
+                android:id="@+id/text_datetime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Created on:"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/image_view" />
+
+            <TextView
+                android:id="@+id/item_datetime"
+                style="?android:attr/textAppearanceLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16sp"
+                android:textIsSelectable="true"
+                android:textSize="18sp"
+                android:datetime="@{Avatar.datetime}"
+                app:layout_constraintStart_toEndOf="@+id/text_datetime"
+                app:layout_constraintTop_toBottomOf="@+id/image_view"
+                tools:context=".AvatarDetailsFragment"/>
+
+
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v4.widget.NestedScrollView>
+</layout>

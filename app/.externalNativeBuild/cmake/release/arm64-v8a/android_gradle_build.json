@@ -1,0 +1,46 @@
+
+{
+	"buildFiles" : [ "D:/art/Android Studio/Projects/Avatar-Creator/app/CMakeLists.txt" ],
+	"cleanCommands" : 
+	[
+		"D:\\Softwares\\Android-Studio\\Sdk\\cmake\\3.6.4111459\\bin\\cmake.exe --build \"D:\\art\\Android Studio\\Projects\\Avatar-Creator\\app\\.externalNativeBuild\\cmake\\release\\arm64-v8a\" --target clean"
+	],
+	"cppFileExtensions" : [ "cpp" ],
+	"libraries" : 
+	{
+		"faceswapper-Release-arm64-v8a" : 
+		{
+			"abi" : "arm64-v8a",
+			"artifactName" : "faceswapper",
+			"buildCommand" : "D:\\Softwares\\Android-Studio\\Sdk\\cmake\\3.6.4111459\\bin\\cmake.exe --build \"D:\\art\\Android Studio\\Projects\\Avatar-Creator\\app\\.externalNativeBuild\\cmake\\release\\arm64-v8a\" --target faceswapper",
+			"buildType" : "release",
+			"files" : 
+			[
+				
+				{
+					"flags" : "  --target=aarch64-none-linux-android21 --gcc-toolchain=D:/Softwares/Android-Studio/Sdk/ndk-bundle/toolchains/aarch64-linux-android-4.9/prebuilt/windows-x86_64 --sysroot=D:/Softwares/Android-Studio/Sdk/ndk-bundle/sysroot  -Dfaceswapper_EXPORTS -ID:\\Softwares\\OpenCV-android-sdk\\opencv-4.0.1-android-sdk\\sdk\\native\\jni\\include -isystem D:\\Softwares\\Android-Studio\\Sdk\\ndk-bundle\\sources\\cxx-stl\\llvm-libc++\\include -isystem D:\\Softwares\\Android-Studio\\Sdk\\ndk-bundle\\sources\\cxx-stl\\llvm-libc++abi\\include  -isystem D:/Softwares/Android-Studio/Sdk/ndk-bundle/sysroot/usr/include/aarch64-linux-android -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11 -std=c++11 -frtti -fexceptions -O2 -DNDEBUG  -fPIC    -c ",
+					"src" : "D:/art/Android Studio/Projects/Avatar-Creator/app/src/main/cpp/faceswapper.cpp",
+					"workingDirectory" : "D:/art/Android Studio/Projects/Avatar-Creator/app/.externalNativeBuild/cmake/release/arm64-v8a"
+				}
+			],
+			"output" : "D:/art/Android Studio/Projects/Avatar-Creator/app/build/intermediates/cmake/release/obj/arm64-v8a/libfaceswapper.so",
+			"toolchain" : "1012844115"
+		},
+		"lib_opencv-Release-arm64-v8a" : 
+		{
+			"abi" : "arm64-v8a",
+			"artifactName" : "lib_opencv",
+			"buildType" : "release",
+			"output" : "D:/art/Android Studio/Projects/Avatar-Creator/app/src/main/jniLibs/arm64-v8a/libopencv_java4.so",
+			"toolchain" : "1012844115"
+		}
+	},
+	"toolchains" : 
+	{
+		"1012844115" : 
+		{
+			"cCompilerExecutable" : "D:/Softwares/Android-Studio/Sdk/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/bin/clang.exe",
+			"cppCompilerExecutable" : "D:/Softwares/Android-Studio/Sdk/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/bin/clang++.exe"
+		}
+	}
+}
