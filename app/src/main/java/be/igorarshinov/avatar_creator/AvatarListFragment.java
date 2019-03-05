@@ -168,7 +168,7 @@ public class AvatarListFragment extends Fragment implements LoaderManager.Loader
             onCursorLoadFinishedListener.onCursorLoadFinished(avatar);
         }
 
-        if (cursor.getCount() != 0 || previousSearchQuerySubmitted) showWeatherDataView();
+        if (cursor.getCount() != 0 || previousSearchQuerySubmitted) showAvatarDataView();
     }
 
     @Override
@@ -213,7 +213,7 @@ public class AvatarListFragment extends Fragment implements LoaderManager.Loader
         }
     }
 
-    private void showWeatherDataView() {
+    private void showAvatarDataView() {
 
         progressBar.setVisibility(View.INVISIBLE);
 

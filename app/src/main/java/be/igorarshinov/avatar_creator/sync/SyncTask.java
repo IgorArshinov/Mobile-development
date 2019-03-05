@@ -14,7 +14,7 @@ import be.igorarshinov.avatar_creator.utils.JsonUtils;
 public class SyncTask {
     private static final String LOGTAG = "SyncTask";
 
-    synchronized public static void syncWeather(Context context) {
+    synchronized public static void syncAvatar(Context context) {
 
         try {
 
