@@ -60,7 +60,6 @@ public class AvatarListActivity extends AppCompatActivity implements NavigationV
         setContentView(R.layout.activity_avatar_list);
         boolean tabletSize = getResources().getBoolean(R.bool.isTablet);
 
-
         if (savedInstanceState != null) {
             if (savedInstanceState.containsKey(LIFECYCLE_CALLBACKS_QUERY_TEXT_KEY)) {
                 previousLifecycleQueryText = savedInstanceState
@@ -90,7 +89,7 @@ public class AvatarListActivity extends AppCompatActivity implements NavigationV
         navigationView.setNavigationItemSelectedListener(this);
         navigationView.setCheckedItem(R.id.drawer_avatars);
 
-        if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE ) {
+        if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
 
             landscapeMode = true;
             avatarDetailsFragment = new AvatarDetailsFragment();
@@ -101,8 +100,6 @@ public class AvatarListActivity extends AppCompatActivity implements NavigationV
             } else {
                 avatarListFragment.setStaggeredGridSpanCount(1);
             }
-
-
         } else if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) {
 
             landscapeMode = false;
@@ -112,19 +109,6 @@ public class AvatarListActivity extends AppCompatActivity implements NavigationV
                 avatarListFragment.setStaggeredGridSpanCount(2);
             }
         }
-
-
-
-//        if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE && tabletSize) {
-//            landscapeMode = true;
-//            avatarDetailsFragment = new AvatarDetailsFragment();
-//            getSupportFragmentManager().beginTransaction().add(R.id.avatar_detail_container, avatarDetailsFragment).commit();
-//
-//            avatarListFragment.setStaggeredGridSpanCount(3);
-//        } else if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT && tabletSize) {
-//
-//            landscapeMode = false;
-//        }
     }
 
     @Override
