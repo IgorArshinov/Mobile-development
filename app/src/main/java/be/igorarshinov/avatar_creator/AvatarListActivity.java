@@ -32,7 +32,7 @@ public class AvatarListActivity extends AppCompatActivity implements NavigationV
     private static final String LIFECYCLE_CALLBACKS_QUERY_TEXT_KEY = "callbacks";
 
     private final String LOGTAG = "AvatarListActivity";
-    private boolean mTwoPane;
+    private boolean twoPane;
 
     private boolean searchQuerySubmitted;
     public static final int INDEX_ID = 0;
@@ -75,7 +75,7 @@ public class AvatarListActivity extends AppCompatActivity implements NavigationV
 
         if (findViewById(R.id.avatar_detail_container) != null) {
 
-            mTwoPane = true;
+            twoPane = true;
         }
 
         drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

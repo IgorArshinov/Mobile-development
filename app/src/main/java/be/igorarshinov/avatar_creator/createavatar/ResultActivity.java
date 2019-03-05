@@ -7,7 +7,6 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -44,23 +43,25 @@ public class ResultActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                AppCache appCache = AppCache.getInstance();
-                newAvatar.setImage((Bitmap) appCache.get("temp"));
+                if (!newAvatar.getName().isEmpty()) {
+                    AppCache appCache = AppCache.getInstance();
+                    newAvatar.setImage((Bitmap) appCache.get("temp"));
 
-                ByteArrayOutputStream stream = new ByteArrayOutputStream();
-                newAvatar.getImage().compress(Bitmap.CompressFormat.JPEG, 100, stream);
-                byte imageInByte[] = stream.toByteArray();
+                    ByteArrayOutputStream stream = new ByteArrayOutputStream();
+                    newAvatar.getImage().compress(Bitmap.CompressFormat.JPEG, 100, stream);
+                    byte imageInByte[] = stream.toByteArray();
 
-                ContentValues contentValues = new ContentValues();
+                    ContentValues contentValues = new ContentValues();
 
-                contentValues.put(AvatarContract.AvatarEntry.COLUMN_NAME, newAvatar.getName());
-                contentValues.put(AvatarContract.AvatarEntry.COLUMN_IMAGE, imageInByte);
+                    contentValues.put(AvatarContract.AvatarEntry.COLUMN_NAME, newAvatar.getName());
+                    contentValues.put(AvatarContract.AvatarEntry.COLUMN_IMAGE, imageInByte);
 
-                Uri uri = getContentResolver().insert(AvatarContract.AvatarEntry.CONTENT_URI, contentValues);
+                    Uri uri = getContentResolver().insert(AvatarContract.AvatarEntry.CONTENT_URI, contentValues);
 
-                Intent intent = new Intent(ResultActivity.this, AvatarListActivity.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                startActivity(intent);
+                    Intent intent = new Intent(ResultActivity.this, AvatarListActivity.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    startActivity(intent);
+                }
             }
         });
     }
